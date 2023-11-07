@@ -1,6 +1,6 @@
 MovieNight - Curerntly under construction 
 
-A movie and tv show streaming application 
+A movie and tv show streaming application utilizing React, Typescript, Python, Flask, MySQL and Tailwind
 
 Features Being Built: 
 - movie and tv show streaming 

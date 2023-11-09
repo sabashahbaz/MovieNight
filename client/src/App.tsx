@@ -12,9 +12,9 @@ function App() {
   return (
       <div className="text-3xl font-bold underline">
           <Header />
-          <Home title={"hello"}/>
-          <Section>my subheading</Section>
-          <Counter setCount={setCount}>Count is{count}</Counter>
+          {/* <Home title={"hello"}/> */}
+          {/* <Section>my subheading</Section>
+          <Counter setCount={setCount}>Count is{count}</Counter> */}
       </div>
         
   )

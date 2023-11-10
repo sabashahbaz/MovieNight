@@ -37,7 +37,7 @@ const Header = () => {
         
     ]
     return(
-        <div className = 'flex items-center justify-between '>
+        <div className = 'flex items-center justify-between p-5'>
             <div className = 'flex gap-8 items-center'>
                 <img src={logo} alt="logo" className = 'w-[200px] md:w-[215px] lg:[240px] object-cover'/>
                 {menu.map((item, index) => (

@@ -11,7 +11,7 @@ const Header = () => {
     const menu = [
         {
             icon: <HiHome/>,   //treat react icons as components 
-            name: 'HOME',
+            name: 'Home',
             
         },
         {
@@ -37,7 +37,7 @@ const Header = () => {
         
     ]
     return(
-        <div className = 'flex items-center gap-8'>
+        <div className = 'flex items-center gap-8 '>
             <img src={logo} alt="logo" className = 'w-[200px] md:w-[215px] lg:[240px] object-cover'/>
             {menu.map((item, index) => (
                 <HeaderItem key={index} name={item.name} icon={item.icon}/>

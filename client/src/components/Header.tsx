@@ -7,7 +7,7 @@ import HeaderItem from './HeaderItem';
 export type ItemType = {
     name: string, icon: React.ReactNode;
 }
-
+//do i need the second header 
 const Header = () => {
     const menu = [
         {
@@ -38,7 +38,13 @@ const Header = () => {
     ]
     return(
         <div className = 'flex items-center justify-between p-5'>
-            <div className = 'flex gap-8 items-center'>
+            <div className = 'hidden md:flex gap-8 items-center'>
+                <img src={logo} alt="logo" className = 'w-[200px] md:w-[215px] lg:[240px] object-cover'/>
+                {menu.map((item, index) => (
+                    <HeaderItem key={index} name={item.name} icon={item.icon}/>
+                ))}
+            </div>
+            <div className = 'flex md:hidden gap-8 items-center'>
                 <img src={logo} alt="logo" className = 'w-[200px] md:w-[215px] lg:[240px] object-cover'/>
                 {menu.map((item, index) => (
                     <HeaderItem key={index} name={item.name} icon={item.icon}/>

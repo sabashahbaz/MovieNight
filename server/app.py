@@ -1,9 +1,10 @@
-from flask import Flask
+from flask import Flask, jsonify
+from flask_cors import CORS
 import requests
 import os 
 
 app = Flask(__name__)
-
+CORS(app)
 
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.secret_token = os.getenv("TOKEN_KEY")
@@ -21,7 +22,8 @@ def search_movie():
         "Authorization": f"Bearer {token}"
     }
     response = requests.get(url, headers=headers)
-    return response.json()
+    trending_movies = response.json()
+    return jsonify({"movies" : trending_movies})
 
     # if response.status_code == 200:
     #     return response.json()

@@ -7,11 +7,7 @@ import os
 app = Flask(__name__)
 CORS(app)
 
-#load_dotenv()
-
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-#app.secret_token = os.getenv("MOVIES_KEY")
-
 
 #Movie API Request
 @app.get('/trending_movies')
@@ -28,6 +24,7 @@ def search_movie():
     response = requests.get(url, headers=headers)
     trending_movies = response.json()
     return jsonify({"movies" : trending_movies})
+
 
     # if response.status_code == 200:
     #     return response.json()

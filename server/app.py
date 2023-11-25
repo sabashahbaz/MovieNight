@@ -2,18 +2,22 @@ from flask import Flask, jsonify
 from flask_cors import CORS
 import requests
 import os 
+#from dotenv import load_dotenv
 
 app = Flask(__name__)
 CORS(app)
 
+#load_dotenv()
+
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-app.secret_token = os.getenv("TOKEN_KEY")
+#app.secret_token = os.getenv("MOVIES_KEY")
 
 
 #Movie API Request
 @app.get('/trending_movies')
 def search_movie():
     token = os.getenv("TOKEN_KEY")
+    print("token",token)
 
     url = "https://api.themoviedb.org/3/trending/movie/day?language=en-US"
 

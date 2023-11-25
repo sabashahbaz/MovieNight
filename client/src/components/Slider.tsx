@@ -1,13 +1,18 @@
-import {useEffect} from 'react'
+import {useEffect, useState} from 'react'
 import axios from 'axios'
 
 const Slider = () => {
 
+    const [trendingMovies, setTrendingMovies] = useState("")
+
     useEffect(() => {
         axios.get('/trending_movies')
-        .then(response => console.log(response))
-
+        .then((response) => {
+            setTrendingMovies(response.data)
+        })
     }, [])
+
+    console.log("trendingmovies",trendingMovies)
 
     return (
         <div>Slider</div>

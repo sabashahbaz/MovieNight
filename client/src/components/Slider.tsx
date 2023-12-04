@@ -58,7 +58,7 @@ const Slider = () => {
         
         <div className = 'flex overflow-x-auto w-full px-4 py-4 scrollbar-hide scroll-smooth' ref={elementRef}>
             {trendingMovies.map((movie) => (
-            <img src ={IMAGE_BASE_URL+movie.poster_path} className = 'w-[310px] md:h-[450px] mr-5 rounded-md hover:border-[4px] border-gray-400 transition-all duration-50 ease-in transition-smooth  '/>
+            <img src ={IMAGE_BASE_URL+movie.poster_path} className = 'w-[310px] md:h-[380px] mr-5 rounded-md hover:border-[4px] border-gray-400 transition-all duration-50 ease-in transition-smooth  '/>
         ))}
         </div>
         </div>
